@@ -1,4 +1,26 @@
+﻿
+# Số máy 
+maybans = {
+    "nuoc": {
+        "Coca": {"gia": 12000, "sl": 5},
+        "Pepsi": {"gia": 11000, "sl": 4},
+        "Sting": {"gia": 10000, "sl": 3}
+    },
+    "keo": {
+        "Kẹo dẻo": {"gia": 5000, "sl": 10},
+        "Kẹo bạc hà": {"gia": 4000, "sl": 8},
+        "Kẹo chanh": {"gia": 3000, "sl": 6}
+    }
+}
 
+# --- HÀM HIỂN THỊ MENU SẢN PHẨM (mặc định giao diện có thể chỉnh nếu muốn đẹp)
+def sanpham(mayban):
+    print(f"\n--- MÁY BÁN: {mayban.upper()} ---")
+    hanghoa = maybans[mayban]
+    for i, ten in enumerate(hanghoa, 1):
+        gia = hanghoa[ten]["gia"]
+        sl = hanghoa[ten]["sl"]
+        print(f"{i}. {ten} - {gia}đ - còn {sl}")
 
 # --- HÀM MUA
 def mua(mayban, tien):
@@ -80,5 +102,6 @@ def main():
 
 
 main()
+
 
 
